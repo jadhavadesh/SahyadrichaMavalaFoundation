@@ -1,0 +1,22 @@
+<!-- ==== Top Banner Section ==== -->
+<section class="home">
+    <img src="../../assets/bg-img1.jpg">
+</section>
+
+<!-- ==== Our Goal Section ==== -->
+<section class="works">
+    <div class="container">
+        <h1 class="text-center">OUR WORKS</h1>
+
+        <div class="row mt-5 mb-5" >
+            <div class="col-lg-3" *ngFor="let wk of works">
+                <div class="box shadow-sm">
+                    <img src="{{wk.image}}" width="100%">
+                    <h2 class="mt-2">{{wk.name}}</h2>
+                    <p class="mt-2">{{wk.description}}</p>
+                    <button mat-raised-button color="warn" class="mt-2">View More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
