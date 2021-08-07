@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder,FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-join-now',
@@ -7,11 +7,18 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./join-now.component.css']
 })
 export class JoinNowComponent implements OnInit {
+  
 
   constructor() { }
-
+  
   ngOnInit(): void {
+
   }
-  name = new FormControl('');
+  hide = true;
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+  
 
 }
